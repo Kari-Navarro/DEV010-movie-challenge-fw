@@ -1,4 +1,4 @@
-  export type Movie = {
+  export interface MoviesInterface{
     adult:             boolean;
     backdrop_path:     string;
     genre_ids:         number[];
@@ -14,8 +14,13 @@
     vote_average:      number;
     vote_count:        number;
 }
-export interface MovieProps{ //una interfaz describe el tipo de estructura de un objeto
-  poster:string
-  title:string
-  year:string
+
+export interface  CardInterface{ //una interfaz describe el tipo de estructura de un objeto
+  poster: string;
+  title:string;
+  year:string;
+}
+
+export interface Url{
+  url:string;
 }
