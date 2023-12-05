@@ -1,0 +1,76 @@
+
+body{
+    background-color: #030F26;
+    display:flex;
+    font-family: 'Lexend Deca', sans-serif;
+    justify-content: center;
+  }
+  
+  #root{
+    display:grid;
+    
+  }
+  .logo{
+    grid-column: 1/4;
+    margin-left: 100px;
+    margin-bottom: 100px;
+  }
+  
+  .data-container{
+    
+  }
+  
+  .movie-list-conatiner{
+   
+      display:grid;
+       grid-template-columns: repeat(6, 9.3fr );
+       grid-gap: 1rem;
+       justify-content: center;
+       text-align: center;
+       color:white;
+       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+       padding: 5%;
+         
+  }
+  
+  .img-container{
+    position: relative;
+  }
+  
+  .movie-poster{
+    height: 260px;
+    width: 190px;
+    border-radius: 20px;
+    grid-template-columns: 25%;
+  }
+  
+  .title-year{
+    text-align: center;
+    color: #F2F2F2;
+    position: absolute;
+    bottom:0px;
+    background-color: #030f26b6; 
+    width: 190px;
+    height: 66px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+  
+  p{
+    font-size: 16px;
+    font-weight: 300;
+  }
+  span{
+    font-weight: 600;
+  }
+  
+  
+  .movie-paginator{
+   grid-column: 1/4;
+   display:grid;
+  }
+  
+  .arrow{
+    border-radius: 50%;
+    background-color: #D93250;
+  }

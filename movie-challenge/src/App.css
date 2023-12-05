@@ -1,62 +1,96 @@
-
-body{
-  background-color: #030F26;
-  display:grid;
-  grid-template-columns: 10% 40% 40% 10%;
+*{
   font-family: 'Lexend Deca', sans-serif;
 }
 
-#root{
-  width: 100%;
+body {
+  background-color: #030F26;
+  display: flex;
+  justify-content: center;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.movie-paginator {
+  grid-column:1/6 ;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 80% 20%;
+  justify-content: center;
+}
+
+.movie-list-container {/*aqui estan las peliculas*/
+  grid-column: 1/6;
   display:grid;
-  grid-column: 2/3;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  }
 
-  
-  
-
-}
-
-
-.data-container{
-  width: 700px;
+.btn-container {
+  grid-row: 2;
+  grid-column: 1/6;
+  align-self: end;
+  justify-self: center;
   display:grid;
-  grid-template-columns: 25% 25% 25% 25% 25%;
-  gap:64px;
+  grid-template-columns: 15% 15% 40% 15% 15%;
+  gap:5%;
+}
 
+.data-container {/*aqui estan las peliculas*/
+  gap: 64px;
 }
-.logo{
-  grid-column: 1/4;
-  margin-left: 100px;
-  margin-bottom: 100px;
+
+.img-container {
+  position: relative;
 }
-.movie{
+
+.movie-poster {
   height: 260px;
   width: 190px;
   border-radius: 20px;
   grid-template-columns: 25%;
-
 }
 
-.img-container{
-  position: relative;
-}
-
-.title-year{
+.title-year {
   text-align: center;
   color: #F2F2F2;
   position: absolute;
-  bottom:0px;
-  background-color: #030f26b6; 
+  bottom: 0px;
+  background-color: #030f26b6;
   width: 190px;
   height: 66px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
 
-p{
+p {
   font-size: 16px;
   font-weight: 300;
 }
-span{
+
+span {
   font-weight: 600;
+}
+
+.arrow{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #251a1c6b;
+  border: none;
+
+}
+.arrow:active{
+  background-color: #D93250;
+}
+.arrow:hover{
+  background-color: #D93250;
+}
+
+.current-page{
+  background-color: #030F26;
+  color: #F2F2F2;
+  font-size: medium;
+  border:none;
 }

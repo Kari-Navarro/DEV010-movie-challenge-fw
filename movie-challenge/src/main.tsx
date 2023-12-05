@@ -1,16 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import Data from './services.tsx';
 import './App.css'
 import Header from './Components/header.tsx';
+//import MovieList from './Components/movielist.tsx';
+import Paginator from './Components/pageLink.tsx';
 
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Header/>
-    <Data />
+    {/*<MovieList/>*/}
+    <Paginator/>
   </React.StrictMode>,
 )
 

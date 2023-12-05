@@ -1,23 +1,17 @@
-import { MovieProps } from "../Interface"
+import { CardInterface } from "../Interface"
+import"../App.css"
 
-
-
-
-const MovieCards = ({poster, title, year}:MovieProps) =>{
+function MovieCards({poster, title, year}:CardInterface){
     return (
-    <section className="movie-card">
-        
-        <div>
-            <img src={dataUrl+dataURL.poster_path} alt={movie.title}/>
-            <div>
-                <span>{movie.title}</span>
-            </div>
-            <div>
-                <p>{movie.title}</p>
-            </div>
+    <div className='data-container'>
+        <div className='img-container'>
+            <img src={poster} className='movie-poster' />
+        <div className='title-year'>
+            <span>{title}</span>
+            <p>{year}</p>
         </div>
-    </section>
-    )
-}
+        </div>
+    </div>)
 
+}
 export default MovieCards
