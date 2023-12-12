@@ -1,3 +1,7 @@
+import { Dispatch, SetStateAction } from 'react';
+  
+  
+  
   export interface MoviesInterface{
     adult:             boolean;
     backdrop_path:     string;
@@ -19,8 +23,19 @@ export interface  CardInterface{ //una interfaz describe el tipo de estructura d
   poster: string;
   title:string;
   year:string;
+  alt:string;
 }
 
 export interface Url{
   url:string;
+}
+
+export interface MovieListInterface{
+  movie: MoviesInterface[];
+  imgUrl: string;
+}
+
+export interface SetCurrentPageInterface{
+  setCurrentPage: Dispatch<SetStateAction<number>>;
+  currentPage:number;
 }
