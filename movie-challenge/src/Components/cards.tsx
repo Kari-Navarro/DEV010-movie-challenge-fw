@@ -5,7 +5,7 @@ function MovieCards({poster, title, year}:CardInterface){
     return (
     <div className='data-container'>
         <div className='img-container'>
-            <img src={poster} className='movie-poster' />
+            <img src={poster} className='movie-poster' alt={title} />
         <div className='title-year'>
             <span>{title}</span>
             <p>{year}</p>
