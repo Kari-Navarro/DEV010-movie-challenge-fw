@@ -12,7 +12,7 @@
      return date
    };
      return (
-           <section className="movie-list-container">
+           <section className= "movie-list-container">
                {movies.map((movie)=>{  
                   return(
              <MovieCards
