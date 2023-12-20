@@ -1,6 +1,6 @@
-/**{
+*{
   font-family: 'Lexend Deca', sans-serif;
-}*/
+}
 
 body {
   background-color: #030F26;
@@ -11,6 +11,10 @@ body {
 #root {
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.home{
+grid-column: 1/6;  
 }
 
 .movie-paginator {
@@ -94,3 +98,15 @@ span {
   font-size: medium;
   border:none;
 }
+
+.input-search{
+border-radius: 25px;
+background-color: #20345C;
+border: none;
+color: #FFFCFC;
+width: 300px;
+height: 50px;
+padding-left: 25px;
+outline: none; 
+}
+

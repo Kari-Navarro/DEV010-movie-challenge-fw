@@ -1,10 +1,7 @@
-//import { useState, useEffect } from 'react';
-//import { MoviesInterface } from '../Interface';
-//import MovieCards from './cards';
+
 import "../App.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesLeft, faAnglesRight, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-//import MovieList from './movielist';
 import { SetCurrentPageInterface } from "../Interface";
 
 // const baseUrl = 'https://api.themoviedb.org/3/discover/movie';
@@ -51,19 +48,24 @@ const Paginator = ({setCurrentPage,currentPage}:SetCurrentPageInterface) => {
         })} 
       </section>*/}
       <section className='btn-container'>
-        <button onClick={handleFirstPage} className='arrow'>
+        <button onClick={handleFirstPage} className='arrow' data-testid= 'firts-btn'>
           <FontAwesomeIcon icon={faAnglesLeft} style={{ color: "#f2f2f2", }} />
         </button>
-        <button onClick={handlePrevPage} className='arrow'>
+        <button onClick={handlePrevPage} className='arrow' data-testid='prev-btn'>
           <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#f2f2f2", }} />
         </button>
         <button className='current-page'><span>{currentPage}</span> ... from 500 pages</button>
-        <button onClick={handleNextPage} className='arrow'>
+ {/*Renderizado condicional, "si currentPage es menor a 500 (true), entonces renderiza los siguiente..." */}
+        {currentPage < 500 && (
+          <>        
+        <button onClick={handleNextPage} className='arrow' data-testid='next-btn'>
           <FontAwesomeIcon icon={faChevronRight} style={{ color: "#f2f2f2", }} />
         </button>
-        <button onClick={handleLastPage} className='arrow'>
-          <FontAwesomeIcon icon={faAnglesRight} style={{ color: "#f2f2f2", }} />
+        <button onClick={handleLastPage} className='arrow' data-testid = 'last-btn'>
+          <FontAwesomeIcon icon={faAnglesRight} style={{ color: "#f2f2f2", }}/>
         </button>
+        </>
+        )}
       </section>
     </div>
   );

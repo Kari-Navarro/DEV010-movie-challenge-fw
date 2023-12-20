@@ -5,9 +5,15 @@ body{
     font-family: 'Lexend Deca', sans-serif;
     justify-content: center;
   }
+
+
+  *{
+    font-family: 'Lexend Deca', sans-serif;
+  }
   
   #root{
     display:grid;
+    font-family: 'Lexend Deca', sans-serif;
     
   }
   .logo{
@@ -28,7 +34,7 @@ body{
        justify-content: center;
        text-align: center;
        color:white;
-       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+       font-family: 'Lexend Deca', sans-serif;
        padding: 5%;
          
   }
@@ -59,6 +65,7 @@ body{
   p{
     font-size: 16px;
     font-weight: 300;
+    font-family: 'Lexend Deca', sans-serif;
   }
   span{
     font-weight: 600;
