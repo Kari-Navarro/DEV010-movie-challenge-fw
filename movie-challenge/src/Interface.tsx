@@ -39,3 +39,7 @@ export interface SetCurrentPageInterface{
   setCurrentPage: Dispatch<SetStateAction<number>>;
   currentPage:number;
 }
+
+export interface MovieDetails{
+  imgUrl: string;
+}

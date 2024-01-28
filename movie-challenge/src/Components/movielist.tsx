@@ -1,6 +1,7 @@
  import MovieCards from "./cards"
  import"../App.css"
  import { MoviesInterface } from "../Interface";
+ import { Link } from 'react-router-dom'
 
 
  function MovieList({movies}:MoviesInterface[]){
@@ -15,13 +16,14 @@
            <section className= "movie-list-container">
                {movies.map((movie)=>{  
                   return(
-             <MovieCards
-             key={movie.id}
-             poster={imgUrl+movie.poster_path}
-             title={movie.title}
-             year={formatDate(movie.release_date)}
-             alt={movie.title}
-             />
+                    <Link key={movie.id} to={`/details/${movie.id}`}>
+                        <MovieCards
+                          poster={imgUrl+movie.poster_path}
+                          title={movie.title}
+                          year={formatDate(movie.release_date)}
+                          alt={movie.title}
+                          />
+                    </Link>
              );
          })}
          </section>
