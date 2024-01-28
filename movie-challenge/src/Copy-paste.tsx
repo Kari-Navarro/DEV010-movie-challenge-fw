@@ -1,6 +1,6 @@
 import "./App.css"
 import { MoviesInterface } from "./Interface";
-import Paginator from "./Components/pageLink";
+import Paginator from "./Components/paginator";
 import { useState, useEffect } from "react";
 import MovieList from "./Components/movielist";
 

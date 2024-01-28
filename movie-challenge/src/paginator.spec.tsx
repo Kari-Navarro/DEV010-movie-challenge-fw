@@ -1,6 +1,6 @@
 
 import { fireEvent, render, screen } from '@testing-library/react';
-import Paginator from './Components/pageLink';
+import Paginator from './Components/paginator';
 
 describe('paginator component', () => {
   const setCurrentPage = jest.fn();
